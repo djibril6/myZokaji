@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Appeller</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <div id="appellerBody">
+    <ion-fab color="primary" vertical="top" horizontal="end" slot="fixed" (click)="joue()">
+      <ion-fab-button>
+        <ion-icon [name]="iconebtn"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <ion-card class="card">
+      <img src="../../assets/img/appeller/tel.jpg" alt="">
+      <ion-card-header>
+        <ion-card-title>Appelles gratuitement !</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Appelles gratuitement et en toute confidentialité pour des conseils sur tout ce qui concerne la santé sexuelle et reproductive.
+        <ion-button expand="block" (click)="appeller()">
+          Lancer l'appel
+          <ion-icon name="call"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

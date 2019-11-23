@@ -7,4 +7,6 @@ export class VarGlobal {
     public numAssistance: any[]; // num supplémentaires pour l'assistance personnelle
     public mdp = '5z0o0k0a0j0i'; // mot de passe pour communiquer avec l'API 
     public maxRubriques = 5;
+    public audioPageAppeller = true;
+    public audioPageConseil = true;
 }

@@ -21,13 +21,13 @@ export class AppComponent {
     },
     {
       title: 'Conseil',
-      url: '/list',
+      url: '/conseil',
       icon: 'transgender'
     },
     {
       title: 'Jeux',
       url: '/jeux',
-      icon: 'game-controller'
+      icon: 'logo-game-controller-b'
     },
     {
       title: 'Forum',
@@ -36,7 +36,7 @@ export class AppComponent {
     },
     {
       title: 'Appeller',
-      url: '/list',
+      url: '/appeller',
       icon: 'call'
     },
     {

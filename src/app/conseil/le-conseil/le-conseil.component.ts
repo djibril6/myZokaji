@@ -18,11 +18,12 @@ export class LeConseilComponent implements OnInit {
   avant = 0;
   apres = 0;
   lesThemes = [];
+  videoPath = '../../../assets/video/';
 
   constructor(public modalCtrl: ModalController, private navParams: NavParams, public vg: VarGlobal, private themes: Themes) {
     this.id = +navParams.get('id');
     this.theme = navParams.get('theme');
-    this.titreVideo = 'assets/video/' + vg.langue + navParams.get('titreVideo');
+    this.titreVideo = this.videoPath + vg.langue + navParams.get('titreVideo');
     this.description = navParams.get('description');
     this.image = navParams.get('image');
     this.lesThemes = themes.lesThemes;
@@ -53,7 +54,7 @@ export class LeConseilComponent implements OnInit {
     this.lesThemes.forEach(t => {
       if (t.id === this.id) {
         this.theme = t.theme;
-        this.titreVideo = 'assets/video/' + this.vg.langue + t.titreVideo;
+        this.titreVideo = this.videoPath + this.vg.langue + t.titreVideo;
         this.description = t.description;
         this.image = t.image;
       }
