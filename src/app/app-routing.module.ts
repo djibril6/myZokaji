@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'langue', loadChildren: './langue/langue.module#LanguePageModule' },
   { path: 'jeux', loadChildren: './jeux/jeux.module#JeuxPageModule' },
   { path: 'morpion', loadChildren: './morpion/morpion.module#MorpionPageModule' },
-  { path: 'appeller', loadChildren: './appeller/appeller.module#AppellerPageModule' }
+  { path: 'appeller', loadChildren: './appeller/appeller.module#AppellerPageModule' },
+  { path: 'forum', loadChildren: './forum/forum.module#ForumPageModule' }
 ];
 
 @NgModule({

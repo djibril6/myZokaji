@@ -31,7 +31,7 @@ export class AppComponent {
     },
     {
       title: 'Forum',
-      url: '/list',
+      url: '/forum',
       icon: 'chatbubbles'
     },
     {

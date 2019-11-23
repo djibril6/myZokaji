@@ -9,4 +9,6 @@ export class VarGlobal {
     public maxRubriques = 5;
     public audioPageAppeller = true;
     public audioPageConseil = true;
+    public lesQuestions: any[];
+    public lesReponses: any[];
 }

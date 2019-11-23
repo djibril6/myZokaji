@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { VarGlobal } from './global/var.global';
+import { ApiService } from './service/api.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +28,7 @@ import { VarGlobal } from './global/var.global';
     VarGlobal,
     NativeStorage,
     ScreenOrientation,
+    ApiService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
