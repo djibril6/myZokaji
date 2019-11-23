@@ -1,0 +1,44 @@
+<ion-content>
+  <div id="content">
+    <div class="context">
+        <img src="assets/img/zokaji.png">
+    </div>
+  
+  
+    <div class="area" >
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+  
+      <div id="buttons">
+        <ion-button 
+        class="button"
+        color="warning" 
+        shape="round" 
+        fill="outline" 
+        (click)="choisirLangue('ha')">
+        Haoussa
+      </ion-button>
+
+        <ion-button class="button" color="danger" shape="round" fill="outline" (click)="choisirLangue('za')">Zarma</ion-button>
+
+        <ion-button class="button" color="light" shape="round" fill="outline" (click)="choisirLangue('fr')">Français</ion-button>
+      </div>
+  
+      <div id="audio">
+        <ion-button color="light" ion-button icon-only class="btn" (click)="joue()">
+          <ion-icon color="dark" [name]="iconebtn"></ion-icon>
+        </ion-button>
+      </div>  
+    </div>
+  </div>
+</ion-content>

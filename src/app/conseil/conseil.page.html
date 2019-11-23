@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Conseils
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="conseilBody">
+    <ion-fab color="primary" vertical="bottom" horizontal="end" slot="fixed" (click)="joue()">
+      <ion-fab-button>
+        <ion-icon [name]="iconebtn"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    <div id="buttons">
+      <div class="contBtn" *ngFor="let item of Themes">
+        <button (click)="goToConseil(item)" style="background: #ffffff;">
+          <div><img class="btnHaut1" [src]="item.image" alt="Image"></div>
+          <div class="text">{{ item.theme }}</div>
+        </button>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Morpion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content  id="grandBody">
+<div id="bodyMorpion" class="ion-padding">
+<ion-list>
+  <ion-button ion-ion-button full [color]="couleur.tour">joueur {{ tour }}</ion-button>
+</ion-list>
+<div id="cont">
+    <img src="assets/img/jeuxPage/morpion/fondMorpion.jpg" id="imgFond">
+    <div class="ha">
+        <div class="test">
+          <ion-button ion-ion-button icon-only class="btn" color="trans" (click)="jouer('1')">
+            <ion-icon [name]="pion.pion1" [color]="couleur.pion1"></ion-icon>
+          </ion-button>
+          <ion-button ion-ion-button icon-only class="btn" color="trans" (click)="jouer('2')">
+              <ion-icon [name]="pion.pion2" [color]="couleur.pion2"></ion-icon>
+          </ion-button>
+          <ion-button ion-ion-button icon-only class="btn" color="trans" (click)="jouer('3')">
+              <ion-icon [name]="pion.pion3" [color]="couleur.pion3"></ion-icon>
+          </ion-button>
+        </div>
+    
+        <div class="test">
+            <ion-button ion-ion-button icon-only class="btn" color="trans" (click)="jouer('4')">
+                <ion-icon [name]="pion.pion4" [color]="couleur.pion4"></ion-icon>
+            </ion-button>
+            <ion-button ion-ion-button icon-only class="btn" color="trans" (click)="jouer('5')">
+                <ion-icon [name]="pion.pion5" [color]="couleur.pion5"></ion-icon>
+            </ion-button>
+            <ion-button ion-ion-button icon-only class="btn" color="trans" (click)="jouer('6')">
+              <ion-icon [name]="pion.pion6" [color]="couleur.pion6"></ion-icon>
+            </ion-button>
+        </div>
+    
+        <div class="test">
+            <ion-button ion-ion-button icon-only class="btn" color="trans" (click)="jouer('7')">
+              <ion-icon [name]="pion.pion7" [color]="couleur.pion7"></ion-icon>
+            </ion-button>
+            <ion-button ion-ion-button icon-only class="btn" color="trans" (click)="jouer('8')">
+                <ion-icon [name]="pion.pion8" [color]="couleur.pion8"></ion-icon>
+            </ion-button>
+            <ion-button ion-ion-button icon-only class="btn" color="trans" (click)="jouer('9')">
+                <ion-icon [name]="pion.pion9" [color]="couleur.pion9"></ion-icon>
+            </ion-button>
+          </div>
+      </div>
+</div>
+<ion-grid id="grid">
+    <ion-row>
+      <ion-col col-12><ion-button ion-ion-button color="primary" round (click)="reprendrePartie()">Reprendre une partie</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12><ion-button ion-ion-button color="dark" round (click)="voirScore()">Voir le score</ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+</ion-content>

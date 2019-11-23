@@ -1,0 +1,7 @@
+{
+  "name": "zokaji",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
