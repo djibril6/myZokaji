@@ -11,7 +11,7 @@ import { Themes } from '../themes';
 export class LeConseilComponent implements OnInit {
 
   id: number;
-  titreVideo: string;
+  titreVideo2: string;
   theme: string;
   description: string;
   image: string;
@@ -23,7 +23,7 @@ export class LeConseilComponent implements OnInit {
   constructor(public modalCtrl: ModalController, private navParams: NavParams, public vg: VarGlobal, private themes: Themes) {
     this.id = +navParams.get('id');
     this.theme = navParams.get('theme');
-    this.titreVideo = this.videoPath + vg.langue + navParams.get('titreVideo');
+    this.titreVideo2 = this.videoPath + vg.langue + navParams.get('titreVideo');
     this.description = navParams.get('description');
     this.image = navParams.get('image');
     this.lesThemes = themes.lesThemes;
@@ -54,7 +54,7 @@ export class LeConseilComponent implements OnInit {
     this.lesThemes.forEach(t => {
       if (t.id === this.id) {
         this.theme = t.theme;
-        this.titreVideo = this.videoPath + this.vg.langue + t.titreVideo;
+        this.titreVideo2 = this.videoPath + this.vg.langue + t.titreVideo;
         this.description = t.description;
         this.image = t.image;
       }

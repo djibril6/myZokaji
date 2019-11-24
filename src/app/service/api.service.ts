@@ -1,5 +1,5 @@
 export class ApiService {
-    public mainUrl = 'http://localhost/apiZokaji/c/';
+    public mainUrl = 'https://zokaji.com/api/c/';
 
     constructor() {}
 
