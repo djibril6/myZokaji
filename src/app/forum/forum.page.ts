@@ -4,6 +4,8 @@ import { VarGlobal } from '../global/var.global';
 import { ToastController, AlertController, ModalController } from '@ionic/angular';
 import { ReponsesComponent } from './reponses/reponses.component';
 
+import { Network } from '@ionic-native/network/ngx';
+
 @Component({
   selector: 'app-forum',
   templateUrl: './forum.page.html',
@@ -12,10 +14,15 @@ import { ReponsesComponent } from './reponses/reponses.component';
 export class ForumPage implements OnInit {
   url: string;
   toDay = Date;
+  networkStat = 'cacheToi';
 
   // tslint:disable-next-line: max-line-length
-  constructor(private api: ApiService, public vg: VarGlobal, public toastController: ToastController, public alertController: AlertController, public modalController: ModalController) {
+  constructor(private api: ApiService, public vg: VarGlobal, public toastController: ToastController, public alertController: AlertController, public modalController: ModalController, private network: Network) {
     this.url = this.api.mainUrl + 'forum.php';
+    this.afficherLesQuestions();
+  }
+
+  afficherLesQuestions() {
     // tslint:disable-next-line: new-parens
     const poserQuestion = new FormData;
     // const toast = this.toastController;
@@ -41,6 +48,8 @@ export class ForumPage implements OnInit {
   }
 
   ngOnInit() {
+    this.checkNetworkifConnected();
+    this.checkNetworkifNotConnected();
   }
 
   async poserUneQuestion() {
@@ -140,6 +149,24 @@ export class ForumPage implements OnInit {
       }
     });
     return await modal.present();
+  }
+
+  checkNetworkifConnected() {
+  const connectSubscription = this.network.onConnect().subscribe(() => {
+    setTimeout(() => {
+      this.afficherLesQuestions();
+      connectSubscription.unsubscribe();
+      this.checkNetworkifNotConnected();
+    }, 3000);
+  });
+  }
+
+  checkNetworkifNotConnected() {
+    const disconnectSubscription = this.network.onDisconnect().subscribe(() => {
+      this.networkStat = 'afficheToi';
+      disconnectSubscription.unsubscribe();
+      this.checkNetworkifConnected();
+    });
   }
 
 }
