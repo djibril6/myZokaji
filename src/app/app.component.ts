@@ -41,7 +41,7 @@ export class AppComponent {
     },
     {
       title: 'Votre Avis',
-      url: '/list',
+      url: '/avis',
       icon: 'megaphone'
     },
     {
@@ -51,7 +51,7 @@ export class AppComponent {
     },
     {
       title: 'Infos de l\'App',
-      url: '/list',
+      url: '/about',
       icon: 'information-circle'
     }
   ];

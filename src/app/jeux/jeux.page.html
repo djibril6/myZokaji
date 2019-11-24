@@ -10,37 +10,39 @@
 </ion-header>
 
 
-<ion-content class="ion-padding bodyJeux">
-  <ion-card>
+<ion-content class="ion-padding">
+  <div id="jeuxBody">
+      <ion-card>
 
-      <ion-item>
-        <h2>Morpion</h2>
-      </ion-item>
+          <ion-item>
+            <h2>Morpion</h2>
+          </ion-item>
+        
+          <img src="assets/img/jeuxPage/morpion/morpion.jpg">
+        
+          <ion-card-content>
+            <p>Joues au morpion</p>
+            <div>
+                <ion-button color="danger" round routerLink="/morpion" router-direction="forward">Jouer</ion-button>
+            </div>
+          </ion-card-content>
     
-      <img src="assets/img/jeuxPage/morpion/morpion.jpg">
+      </ion-card>
+      <ion-card>
     
-      <ion-card-content>
-        <p>Joues au morpion</p>
-        <div>
-            <ion-button color="danger" round routerLink="/morpion" router-direction="forward">Jouer</ion-button>
-        </div>
-      </ion-card-content>
-
-  </ion-card>
-  <ion-card>
-
-      <ion-item>
-        <h2>Jeux de cartes</h2>
-      </ion-item>
+          <ion-item>
+            <h2>Jeux de cartes</h2>
+          </ion-item>
+        
+          <img src="assets/img/jeuxPage/jeuxcarte/jeuxCarte.jpg">
+        
+          <ion-card-content>
+            <p>Bientôt disponible</p>
+            <div>
+                <ion-button ion-button color="danger" round>Jouer</ion-button>
+            </div>
+          </ion-card-content>
     
-      <img src="assets/img/jeuxPage/jeuxcarte/jeuxCarte.jpg">
-    
-      <ion-card-content>
-        <p>Bientôt disponible</p>
-        <div>
-            <ion-button ion-button color="danger" round>Jouer</ion-button>
-        </div>
-      </ion-card-content>
-
-  </ion-card>
+      </ion-card>
+  </div>
 </ion-content>

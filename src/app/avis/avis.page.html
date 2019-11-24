@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Votre avis
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div id="avisBody">
+<ion-card>
+  <img src="../../assets/img/avis/avis.png" alt="photo">
+  <ion-card-header>
+    <ion-card-subtitle>Aidez nous à améliorer nos services</ion-card-subtitle>
+    <ion-card-title>Donnez nous votre avis</ion-card-title>
+  </ion-card-header>
+  <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="1"></ion-col>
+          <ion-col size="2">
+            <ion-icon [name]="hearts[0]" (click)="donnerCoeur(1)"></ion-icon>
+          </ion-col>
+          <ion-col size="2">
+            <ion-icon [name]="hearts[1]" (click)="donnerCoeur(2)"></ion-icon>
+          </ion-col>
+          <ion-col size="2">
+            <ion-icon [name]="hearts[2]" (click)="donnerCoeur(3)"></ion-icon>
+          </ion-col>
+          <ion-col size="2">
+            <ion-icon [name]="hearts[3]" (click)="donnerCoeur(4)"></ion-icon>
+          </ion-col>
+          <ion-col size="2">
+            <ion-icon [name]="hearts[4]" (click)="donnerCoeur(5)"></ion-icon>
+          </ion-col>
+          <ion-col size="1"></ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-item>
+
+  <ion-card-content>
+    <ion-textarea autofocus="true" rows="4" placeholder="Que pensez vous de cette appli ? Selon vous qu'est-ce qui pourrait être amélioré ?" [(ngModel)]="avisEnText" name="avisEnText"></ion-textarea>
+  </ion-card-content>
+</ion-card>
+<ion-button expand="block" fill="outline" (click)="envoyerAvis()">Envoyer</ion-button>
+</div>
+</ion-content>

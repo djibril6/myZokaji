@@ -19,7 +19,9 @@ const routes: Routes = [
   { path: 'jeux', loadChildren: './jeux/jeux.module#JeuxPageModule' },
   { path: 'morpion', loadChildren: './morpion/morpion.module#MorpionPageModule' },
   { path: 'appeller', loadChildren: './appeller/appeller.module#AppellerPageModule' },
-  { path: 'forum', loadChildren: './forum/forum.module#ForumPageModule' }
+  { path: 'forum', loadChildren: './forum/forum.module#ForumPageModule' },
+  { path: 'avis', loadChildren: './avis/avis.module#AvisPageModule' },
+  { path: 'about', loadChildren: './about/about.module#AboutPageModule' }
 ];
 
 @NgModule({
