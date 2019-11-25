@@ -77,8 +77,10 @@ export class AppComponent {
         this.gl.langue = data.langueChoisie;
         this.router.navigate(['/home']);
       },
-      error => console.error(error)
-    );
+      error => this.router.navigate(['/langue'])
+    )
+    .catch (() => {this.router.navigate(['/langue']);
+    });
     });
   }
 }

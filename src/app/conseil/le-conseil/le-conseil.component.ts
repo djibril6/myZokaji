@@ -4,6 +4,7 @@ import { VarGlobal } from 'src/app/global/var.global';
 import { Themes } from '../themes';
 
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import { VideoPlayer } from '@ionic-native/video-player/ngx';
 
 @Component({
   selector: 'app-le-conseil',
@@ -13,28 +14,36 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 export class LeConseilComponent implements OnInit {
 
   id: number;
-  titreVideo2: string;
+  titreVideo2 = '../../../assets/video/' + this.vg.langue + this.navParams.get('titreVideo');
   theme: string;
   description: string;
-  image: string;
+  image2 = this.navParams.get('image');
   avant = 0;
   apres = 0;
   lesThemes = [];
   videoPath = '../../../assets/video/';
 
   // tslint:disable-next-line: max-line-length
-  constructor(public modalCtrl: ModalController, private navParams: NavParams, public vg: VarGlobal, private themes: Themes, public screenOrientation: ScreenOrientation) {
+  constructor(public modalCtrl: ModalController, private navParams: NavParams, public vg: VarGlobal, private themes: Themes, public screenOrientation: ScreenOrientation, private videoPlayer: VideoPlayer) {
     this.id = +navParams.get('id');
     this.theme = navParams.get('theme');
     this.titreVideo2 = this.videoPath + vg.langue + navParams.get('titreVideo');
     this.description = navParams.get('description');
-    this.image = navParams.get('image');
+    this.image2 = navParams.get('image');
     this.lesThemes = themes.lesThemes;
   }
 
   ngOnInit() {
     this.titreVideo2 = this.videoPath + this.vg.langue + this.navParams.get('titreVideo');
     this.screenOrientation.unlock();
+  }
+
+  jouerVideo() {
+    this.videoPlayer.play('../../../assets/video/fr/ana_physio.mp4').then(() => {
+      console.log('video completed');
+    }).catch(err => {
+      console.log(err);
+    });
   }
 
   dismissModal() {
@@ -62,7 +71,7 @@ export class LeConseilComponent implements OnInit {
         this.theme = t.theme;
         this.titreVideo2 = this.videoPath + this.vg.langue + t.titreVideo;
         this.description = t.description;
-        this.image = t.image;
+        this.image2 = t.image;
       }
     });
   }

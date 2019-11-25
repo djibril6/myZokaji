@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
+import { VideoPlayer } from '@ionic-native/video-player/ngx';
+
 import { ConseilPage } from './conseil.page';
 import { LeConseilComponent } from './le-conseil/le-conseil.component';
 import { Themes } from './themes';
@@ -24,6 +26,6 @@ import { Themes } from './themes';
   entryComponents: [
     LeConseilComponent,
   ],
-  providers: [Themes]
+  providers: [Themes, VideoPlayer]
 })
 export class ConseilPageModule {}

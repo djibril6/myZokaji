@@ -38,7 +38,7 @@ export class LanguePage implements OnInit {
     this.iconebtn = 'play';
   }
 
-  allerAuForum(){
+  allerAuForum() {
     this.welcomAudio.currentTime = 0;
     this.welcomAudio.pause();
     this.iconebtn = 'play';
@@ -58,7 +58,6 @@ export class LanguePage implements OnInit {
         () => this.router.navigate(['/home']),
         error => this.router.navigate(['/home'])
       );
-    this.router.navigate(['/home']); // A enlever avant compilation
   }
 
   joue() {
