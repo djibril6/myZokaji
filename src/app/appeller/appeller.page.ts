@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { CallNumber } from '@ionic-native/call-number/ngx';
 import { VarGlobal } from '../global/var.global';
@@ -8,9 +8,9 @@ import { VarGlobal } from '../global/var.global';
   templateUrl: './appeller.page.html',
   styleUrls: ['./appeller.page.scss'],
 })
-export class AppellerPage implements OnInit {
+export class AppellerPage implements OnInit, OnDestroy {
 
-  welcomAudio = new Audio('../../assets/audio/audio.mp4');
+  welcomAudio = new Audio('../../assets/audio/appel.mp3');
   iconebtn = 'play'; // change vers pause si audio en marche
 
   constructor(private callNumber: CallNumber, public vg: VarGlobal) { }
@@ -20,6 +20,10 @@ export class AppellerPage implements OnInit {
       this.welcomAudio.play();
       this.iconebtn = 'pause';
     }
+  }
+  ngOnDestroy() {
+    this.welcomAudio.pause();
+    this.iconebtn = 'play';
   }
 
   appeller() {

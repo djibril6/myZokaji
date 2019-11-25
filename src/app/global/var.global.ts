@@ -1,5 +1,5 @@
 export class VarGlobal {
-    public langue = 'Fr'; // contient la langue choisie par défaut (fr, ha, za)
+    public langue = 'fr'; // contient la langue choisie par défaut (fr, ha, za)
     public mediaPageIndex: any[]; // les media en ligne de la page index
     public mediaConseil: any[]; // Pour la pge conseil
     public rubriqueConseil: any[]; // contient les rubriques

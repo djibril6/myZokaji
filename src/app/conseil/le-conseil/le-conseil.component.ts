@@ -3,6 +3,8 @@ import { ModalController, NavParams } from '@ionic/angular';
 import { VarGlobal } from 'src/app/global/var.global';
 import { Themes } from '../themes';
 
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
 @Component({
   selector: 'app-le-conseil',
   templateUrl: './le-conseil.component.html',
@@ -20,7 +22,8 @@ export class LeConseilComponent implements OnInit {
   lesThemes = [];
   videoPath = '../../../assets/video/';
 
-  constructor(public modalCtrl: ModalController, private navParams: NavParams, public vg: VarGlobal, private themes: Themes) {
+  // tslint:disable-next-line: max-line-length
+  constructor(public modalCtrl: ModalController, private navParams: NavParams, public vg: VarGlobal, private themes: Themes, public screenOrientation: ScreenOrientation) {
     this.id = +navParams.get('id');
     this.theme = navParams.get('theme');
     this.titreVideo2 = this.videoPath + vg.langue + navParams.get('titreVideo');
@@ -29,7 +32,10 @@ export class LeConseilComponent implements OnInit {
     this.lesThemes = themes.lesThemes;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.titreVideo2 = this.videoPath + this.vg.langue + this.navParams.get('titreVideo');
+    this.screenOrientation.unlock();
+  }
 
   dismissModal() {
     this.modalCtrl.dismiss({

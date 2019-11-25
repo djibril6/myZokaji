@@ -68,6 +68,7 @@ export class ReponsesComponent implements OnInit {
     this.api.ajaxPost(this.url, repData, async (rep) => {
       this.presentToast(rep.message);
       this.vg.lesReponses = rep.result;
+      this.reponse = '';
     });
   }
 

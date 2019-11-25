@@ -47,6 +47,7 @@ export class AvisPage implements OnInit {
 
     this.api.ajaxPost(this.url, avis, async (rep) => {
       this.presentToast(rep.message);
+      this.avisEnText = '';
     });
   }
 

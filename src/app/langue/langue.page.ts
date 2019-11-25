@@ -12,7 +12,7 @@ import { VarGlobal } from 'src/app/global/var.global';
 })
 export class LanguePage implements OnInit {
 
-  welcomAudio = new Audio('../../assets/audio/welcomAudio.mp4');
+  welcomAudio = new Audio('../../assets/audio/langue.mp3');
 
   iconebtn = 'play'; // change vers pause si audio en marche
 

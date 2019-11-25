@@ -14,7 +14,7 @@ export class ConseilPage implements OnInit, OnDestroy {
   Themes = [];
 
   cn = 'sans';
-  welcomAudio = new Audio('../../assets/audio/audio.mp4');
+  welcomAudio = new Audio('../../assets/audio/conseil.mp3');
 
   iconebtn = 'play'; // change vers pause si audio en marche
   constructor(public modalController: ModalController, private themes: Themes, public vg: VarGlobal) {

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="ne.anida.zokaji" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="ne.anida.zokaji" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Zokaji</name>
     <description>Le principal objectif de Zokaji est d'accroître l'accès à l'information sur la santé sexuelle et reproductive des jeunes au Niger, compte tenu de son taux élevé d'analphabètes.</description>
     <author email="issoufoudjib@gmail.com" href="https://zokaji.com/">Djibril ISSOUFOU MAMAN</author>
